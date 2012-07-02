@@ -1,0 +1,46 @@
+@import "./partials/general.css.scss";
+@import "./partials/colors.css.scss";
+@import "./partials/fonts.css.scss";
+
+.info-box {
+  background: url("noize.png") repeat top left, -webkit-linear-gradient($coral, $coral);
+  border-radius: 5px;
+  border-color: $coral;
+  width: 350px;
+  height: 150px;
+  margin: 25px;
+  display: inline-block;
+
+  h1 {
+    font-family: Static-Bold;
+    letter-spacing: .05em;
+    font-size: 2.5em;
+    padding: .5em;
+    padding-bottom: 0;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+  }
+  p {
+    font-family: Static-Bold;
+    letter-spacing: .05em;
+    font-size: 22px;
+    padding-left: 10px;
+    margin-top: 0px;
+    color: #fff;
+  }
+
+}
+
+h1 {
+  font-family: Static-Bold;
+  letter-spacing: .05em;
+  font-size: 2.5em;
+  padding: .5em;
+  padding-bottom: 0;
+}
+
+
+
+
+

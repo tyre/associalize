@@ -1,0 +1,8 @@
+section#facebook-section
+  .header
+    h1.centered #{auth.provider.titleize}
+    img src="#{auth.image}"
+  #facebook-stream.stream-body.centered
+    ul
+  script type='text/html' id='feed-items-template'
+    = render partial: 'facebook/feed_item'

@@ -1,0 +1,8 @@
+section#twitter-section
+  .header
+    h1.centered #{auth.provider.titleize}
+    img src="#{auth.image}"
+  #twitter-stream.stream-body.centered
+    ul
+  script type='text/html' id='tweets-template'
+    = render partial: 'twitter/tweet'

@@ -1,0 +1,35 @@
+@import "./partials/general.css.scss";
+@import "./partials/colors.css.scss";
+
+.signup-float {
+  @include floater(-12em);  //should be inverse of .login height
+}
+
+
+.form {
+  input {
+    padding-top: .5em;
+    padding-bottom: .5em;
+    margin-bottom: .5em;
+  }
+
+  a {
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: .25em;
+    padding-bottom: .25em;
+
+    @include white-gradient;
+    @include engraved-light;
+    color: $grey;
+    display: inline-block;
+    border-radius: .2em;
+    cursor: pointer;
+
+    &:hover {
+      @include engraved-dark;
+      color:white;
+      background: $grey;
+    }
+  }
+}

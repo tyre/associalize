@@ -1,0 +1,1 @@
+json.(@location, :latitude, :longitude) if @location

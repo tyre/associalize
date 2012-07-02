@@ -1,0 +1,17 @@
+get_latest_tweets:
+  every: ['300s']
+  class: TwitterMaster
+  queue: twitter_master
+  description: 'Work ALL the Twitter streams!'
+
+get_latest_feed_items:
+  every: ['300s']
+  class: FacebookMaster
+  queue: facebook_master
+  description: 'Grab ALL the feed items!'
+
+update_deals:
+  every: ['1h']
+  class: DealWorker
+  queue: deals
+  description: 'Black Friday muthafucka! Grab ALL the deals!'

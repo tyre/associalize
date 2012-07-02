@@ -1,0 +1,7 @@
+.errors
+  - if object.errors.messages[field]  
+    ul.messages
+    - object.errors.messages[field].each do |error_message|
+      li
+        span.field = field.to_s.titleize
+        |  #{error_message}

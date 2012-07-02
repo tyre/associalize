@@ -1,0 +1,44 @@
+@import "./partials/colors.css.scss";
+#header {
+  padding: .5em;
+  background: $grey;
+  background-image: url('black-Linen2.png');
+  height : 150px;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+  ul{
+    width: 6000px;
+    .deal {
+
+      background: url('noize.png'), $green;
+      padding: 1em;
+      width: 280px;
+      border-radius: 4px;
+      float: left;
+      display: inline-block;
+      position: relative;
+      list-style:none;
+      margin: 0 8px;
+
+      #image {
+        float: left;
+        display: inline;
+        img { height: 100px; }
+      }
+      #info {
+        width: 70%;
+        display: inline;
+        p {
+          font-size: 12px;
+          margin: 0;
+          padding: 0;
+          color: #fff; 
+          &#title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #848484;
+          }
+        }
+      }
+    }}
+  }

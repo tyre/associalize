@@ -1,0 +1,79 @@
+@import './colors.css.scss';
+@import './fonts.css.scss';
+
+body {
+  background-size: 100%;
+  background-color: $sky-blue;
+  background-image: -webkit-repeating-linear-gradient(45deg, transparent, transparent 25px, $pale-yellow 15px, $pale-yellow 30px);
+}
+
+h1, h2 {
+  font-family: Static-Bold;
+  letter-spacing: .05em;
+  display: absolute;
+  padding: .5em;
+  color: white;
+}
+
+h1 {font-size: 2em;}
+h2 {font-size: 1.7em;}
+
+.brand {
+  background: url("noize.png") repeat top left, $green;
+  padding: .5em;
+  width: 200px;
+  border-radius: 4px;
+}
+
+.flash {
+  background: url("noize.png") repeat top left, white;
+  padding: 1em;
+  .error {
+    color: red;
+    font-weight: bold;
+  }
+
+  p{
+    margin: 0;
+  }
+}
+
+a {
+  color: $pale-yellow;
+  &:hover{
+    color:$sky-blue;
+  }
+}
+.centered {
+  margin: 0 auto;
+  text-align: center;
+}
+
+@mixin floater($height) {
+  position: absolute;
+  top: 50%;
+  margin-top: $height/2;
+  left: 0;
+  width: 100%;
+}
+
+@mixin horizontal-center {
+  margin: auto;
+  clear: both;
+  position: relative;
+}
+
+@mixin engraved-dark {
+  text-shadow: 0px 1px 0px rgba(255,255,255,.5);
+}
+
+@mixin engraved-light {
+  text-shadow: 0px -1px 0px rgba(0,0,0,.5);
+}
+
+@mixin well($bg-color) {
+  background-color: $bg-color;
+  border-radius: .25em;
+  padding: .5em;
+  margin: .25em;
+}

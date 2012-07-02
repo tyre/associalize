@@ -1,0 +1,14 @@
+doctype 5
+html
+  head
+    title Associalize
+    = stylesheet_link_tag "application", media: "all" 
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+    script type='text/javascript' src='http://maps.googleapis.com/maps/api/js?key=AIzaSyBW4k3OXXL4zY7Pa5g6CnfkZWMC7algjtA&sensor=false'
+  body
+    = render partial: 'shared/flash', :locals => {:flash => flash} 
+    div#header
+      = yield(:header)
+    div#content
+      = yield

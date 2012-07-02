@@ -1,0 +1,15 @@
+@import "./partials/general.css.scss";
+@import "./partials/colors.css.scss";
+
+.signup-float {
+  @include floater(-10em);
+}
+.signup {
+  @include horizontal-center;
+  width: 14.5em;
+  height: 20em;
+}
+li {
+  list-style: none;
+  list-style-image: none;
+}

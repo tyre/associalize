@@ -1,0 +1,27 @@
+// Place all the styles related to the FeedItems controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.feed-item {
+  color: white;
+  background-color: #616363;
+  border-radius: 3px;
+  border-color: #474949;
+  border-style: solid;
+  padding: 1em;
+  margin: 1em;
+
+  .facebook-user {
+    font-family: Valentina-Regular;
+    color: #35D5DE;
+    font-weight: bold;
+    font-size: 1em;
+    text-align: left;
+  }
+
+  .feed-item-message {
+    text-align: left;
+    color: white;
+    letter-spacing: .05em;
+  }
+}

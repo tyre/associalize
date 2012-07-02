@@ -1,0 +1,1 @@
+json.(tweet, :id, :html_safe_content, :post_time, :handle)

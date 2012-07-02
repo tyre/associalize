@@ -1,0 +1,14 @@
+@import "./partials/colors.css.scss";
+
+li {
+  color: red;
+  .field {
+    font-weight: bold;
+  }
+}
+
+.errors {
+  background: url("noize.png") repeat top left, white;
+  border-radius: 4px;
+  padding: 4px;
+}

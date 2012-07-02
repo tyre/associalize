@@ -1,0 +1,3 @@
+- PROVIDERS.each do |provider|
+  - unless current_user.send("has_#{provider}?")
+    a href="/auth/#{provider}" "#{provider.titleize}"

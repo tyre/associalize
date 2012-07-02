@@ -1,0 +1,1 @@
+PROVIDERS = ['twitter', 'facebook']

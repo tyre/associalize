@@ -1,0 +1,1 @@
+json.(deal, :image_url, :long_title, :link, :market_name, :savings)

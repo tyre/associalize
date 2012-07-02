@@ -1,0 +1,17 @@
+$orange: #FF9E13;
+$pale-yellow: #FBE79A;
+$sky-blue: #60BCE0;
+$grey: #6D6D6D;
+$coral: #FA6B58;
+$green: #B2F09E;
+$dark-blue: #455774;
+
+@mixin white-gradient {
+  background: #fcfcfc;
+  background: -moz-radial-gradient(center, ellipse cover,  #fcfcfc 0%, #efefef 40%, #dddddd 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#fcfcfc), color-stop(40%,#efefef), color-stop(100%,#dddddd));
+  background: -webkit-radial-gradient(center, ellipse cover,  #fcfcfc 0%,#efefef 40%,#dddddd 100%);
+  background: -o-radial-gradient(center, ellipse cover,  #fcfcfc 0%,#efefef 40%,#dddddd 100%);
+  background: -ms-radial-gradient(center, ellipse cover,  #fcfcfc 0%,#efefef 40%,#dddddd 100%);
+  background: radial-gradient(center, ellipse cover,  #fcfcfc 0%,#efefef 40%,#dddddd 100%);
+}

@@ -1,0 +1,17 @@
+@import "./partials/general.css.scss";
+@import "./partials/colors.css.scss";
+
+h1,h2,h3,h4,h5,h6 {
+  @include engraved-light;
+}
+.login-float {
+  @include floater(-12em);  //should be inverse of .login height
+}
+
+.login {
+  @include horizontal-center;
+  width: 14.5em;
+  height: 12em;
+
+}
+

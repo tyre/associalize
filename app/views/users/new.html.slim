@@ -1,0 +1,16 @@
+=content_for(:header) do
+  h1.centered.engraved-light.brand Signup
+  a.signup href="#{signup_path}"
+    | Signup
+.signup-float
+  .signup.form
+    = form_for @new_user, class: 'form' do |f|
+      = render 'shared/errors', object: @new_user, :field => :email
+      = f.text_field :email, placeholder: 'harold@vom.com', size: 30
+      br
+      = render 'shared/errors', object: @new_user, :field => :password
+      = f.password_field :password, placeholder: '**********', size: 30
+      br
+      = render 'shared/errors', object: @new_user, :field => :password_confirmation    
+      = password_field_tag 'user[password_confirmation]', nil, placeholder: '**********', size: 30
+      = f.submit 'Signup'

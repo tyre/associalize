@@ -1,0 +1,1 @@
+json.(feed_item, :id, :post_id, :message, :post_type, :from_user_name)

@@ -1,0 +1,24 @@
+@import "./partials/fonts.css.scss";
+.tweet {
+
+  background-color: #616363;
+  border-radius: 3px;
+  border-color: #474949;
+  border-style: solid;
+  padding: 1em;
+  margin: 1em;
+}
+
+.handle {
+  font-family: Valentina-Regular;
+  color: #35D5DE;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: left;
+}
+
+.tweet-content {
+  text-align: left;
+  color: white;
+  letter-spacing: .05em;
+}

@@ -1,0 +1,9 @@
+.login-float
+  h1.centered Login
+  .form.centered
+    = form_tag sessions_path, id: 'login-form' do
+      = text_field_tag :email, nil, placeholder: 'harold@vom.com'
+      br
+      = password_field_tag :password, nil, placeholder: '**********'
+      = submit_tag 'Login', class: 'text-left', id: 'login-submit'
+    = link_to 'Signup', signup_path, class: 'text-right'

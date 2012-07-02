@@ -1,0 +1,17 @@
+@import "./partials/fonts.css.scss";
+
+.header {
+  background: url("noize.png") repeat top left, -webkit-linear-gradient(#FA6B58, #FA6B58, #FA6B58);
+  color: #fff;
+  height: 75px;
+  width: 100%;
+  display: block;
+
+  img {
+    margin-top: -100px;
+    margin-left: .5em;
+    height: 50px;
+    width: 50px;
+    display: absolute;  
+  }
+}

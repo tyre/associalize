@@ -1,0 +1,20 @@
+development:
+  host: pearl.mongohq.com
+  port: 27019
+  username: ha
+  password: hungry
+  database: app4574678
+
+test:
+  host: pearl.mongohq.com
+  port: 27019
+  username: ha
+  password: hungry
+  database: app4574678
+
+production:
+  host: pearl.mongohq.com
+  port: 27019
+  username: ha
+  password: hungry
+  database: app4574678

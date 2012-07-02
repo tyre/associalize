@@ -1,0 +1,40 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://deep-stone-8106.herokuapp.com/boundary?latitude=38.89&longitude=-77.03&distance=50
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+      connection:
+      - close
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type:
+      - application/json; charset=ISO-8859-1
+      date:
+      - Sun, 01 Jul 2012 19:25:28 GMT
+      server:
+      - Jetty(6.1.25)
+      set-cookie:
+      - ring-session=cd3d5c93-7398-42a0-9459-049a5ffdab60;Path=/
+      content-length:
+      - '147'
+      connection:
+      - Close
+    body:
+      encoding: US-ASCII
+      string: ! '{"maximum":{"latitude":39.611973028138635,"longitude":-76.10243465088504},"minimum":{"latitude":38.168026971861366,"longitude":-77.95756534911496}}'
+    http_version: '1.1'
+  recorded_at: Sun, 01 Jul 2012 19:25:28 GMT
+recorded_with: VCR 2.2.2
