@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   has_many :feed_items
   has_many :locations
   attr_accessible :email, :password, :password_confirmation
-  validates :email, presence: true
+  validates :email, presence: true, uniqueness: true
   validates :password, confirmation: true, presence: true, length:
   { minimum: 7 }
 
