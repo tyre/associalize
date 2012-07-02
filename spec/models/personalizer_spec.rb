@@ -1,15 +1,23 @@
 require "spec_helper"
 
-describe Personalizer do
-  use_vcr_cassette
-  let!(:user) { Fabricate(:user) }
-  let!(:location) { Fabricate(:location) }
-  context 'initialization' do
-    it 'takes in a user and sets a boundary' do
-      user.current_location = location
-      p = Personalizer.new(user)
-      p.boundary.should be 
-      p.boundary.should be_a(Boundary)
+describe DealFinder do
+
+  context 'with location' do
+    it 'returns deals within that boundary' do
+      boundary = double('Boundary')
+      deal_finder = DealFinder.new(boundary)
+      Deal.should_receive(:local_deals).with(boundary).and_return(:foo)
+      deal_finder.get_deals
+      deal_finder.all_deals.should == :foo
+    end
+  end
+
+  context 'without a location' do
+    it 'returns national deals' do
+      deal_finder = DealFinder.new()
+      Deal.should_receive(:national_deals).and_return(:bar)
+      deal_finder.get_deals
+      deal_finder.all_deals.should == :bar
     end
   end
 end

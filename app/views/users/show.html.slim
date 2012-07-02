@@ -1,8 +1,4 @@
 = render partial: 'deals/show'
-= render partial: 'users/settings', locals: { user: current_user }
-
-- current_user.authentications.each do |auth|
-  - provider = auth.provider
-
-  - if current_user.send("has_#{provider}?")
-    = render partial: "streams/#{provider}", locals: { auth: auth }
+- PROVIDERS.each do |provider|
+  - auth = current_user.authentications.find_by_provider(provider)
+  = render partial: "streams/#{provider}", locals: { auth: auth }

@@ -18,9 +18,4 @@ describe User do
       user.current_location?.should be_true
     end
   end
-  # context 'getting associated deals' do
-  #   it 'returns an enumerable object containing deals' do
-  #     user.nearby_deals.each { |d| d.should be_a(Deal)  }
-  #   end
-  # end
 end

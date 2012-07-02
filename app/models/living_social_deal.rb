@@ -15,7 +15,7 @@ class LivingSocialDeal
   field :country_code
   field :subtitle
   field :offer_ends_at
-  field :price  
+  field :price
   field :value
   field :savings
   field :order_count
@@ -28,8 +28,14 @@ class LivingSocialDeal
   field :details
   field :content
   field :merchant
+  field :updated
 
   index(
     [[:division_latlon, Mongo::GEO2D]], background: true
     )
+
+  def self.since_an_hour_ago
+    an_hour_ago = (1.5).hours.ago
+    where(:updated.gte => time_ago).all
+  end
 end

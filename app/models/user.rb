@@ -18,11 +18,11 @@ class User < ActiveRecord::Base
   end
 
   def find_boundaries
-    @boundary = Boundary.new(self.current_location)
+    @boundary = Boundary.new(current_location)
   end
 
   def nearby_deals
-   Personalizer.new(self).get_deals
+   DealFinder.new(boundary).get_deals
   end
 
   def current_location

@@ -48,7 +48,7 @@ describe 'User' do
 
     it 'user#show accessable on success' do
       fill_in 'email', with: user.email
-      fill_in 'password', with: user.password
+      fill_in 'password', with: 'hungry1'
       click_button('Login')
       visit user_path(user)
       current_path.should == user_path(user)

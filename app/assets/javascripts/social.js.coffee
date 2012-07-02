@@ -12,7 +12,6 @@ class StreamRenderer
 
 
 addTwitterLinks = ->
-  console.log $('.handle')
   for handle in $('.handle')
     name = $(handle).text()
     $(handle).wrap("<a href='http://twitter.com/#!/#{name}' target='_blank'></a>")

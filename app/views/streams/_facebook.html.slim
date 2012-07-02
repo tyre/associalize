@@ -1,8 +1,13 @@
 section#facebook-section
   .header
-    h1.centered #{auth.provider.titleize}
-    img src="#{auth.image}"
-  #facebook-stream.stream-body.centered
-    ul
+    h1.centered Facebook
+    - if current_user.has_facebook?
+      img src="#{auth.image}"
+  - if auth
+    #facebook-stream.stream-body.centered
+      ul
+  - else
+    a.integrate href='auth/facebook' Integrate
+    h1.centered.integrate-message #{"Not yet integrated :\'("}
   script type='text/html' id='feed-items-template'
     = render partial: 'facebook/feed_item'

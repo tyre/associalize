@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
   before_filter :require_login, except: [:new, :create]
+  before_filter :go_to_user_page, only: [:show, :new]
+
   def new
     @new_user = User.new
   end
@@ -12,8 +14,8 @@ class UsersController < ApplicationController
     else
       render :new
     end
-  end 
-  
+  end
+
   def show
   end
 

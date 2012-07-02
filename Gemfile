@@ -51,4 +51,5 @@ group :test, :development do
   gem 'fakeweb'
   gem 'simplecov'
   gem 'capybara'
+  gem 'launchy'
 end

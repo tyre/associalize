@@ -1,8 +1,13 @@
 section#twitter-section
   .header
-    h1.centered #{auth.provider.titleize}
-    img src="#{auth.image}"
-  #twitter-stream.stream-body.centered
-    ul
+    h1.centered Twitter
+    - if current_user.has_twitter?
+      img src="#{auth.image}"
+  - if current_user.has_twitter?
+    #twitter-stream.stream-body.centered
+      ul
+  - else
+    a.integrate href='/auth/twitter' Integrate
+    h1.centered.integrate-message #{"Not yet integrated :\'("}
   script type='text/html' id='tweets-template'
     = render partial: 'twitter/tweet'

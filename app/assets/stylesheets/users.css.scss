@@ -13,3 +13,24 @@ li {
   list-style: none;
   list-style-image: none;
 }
+
+.integrate {
+  background-color: $sky-blue;
+  padding: .5em;
+  border-radius: .25em;
+  border-color: $coral;
+  border-style: solid;
+  border-width: 2px;
+  color: $pale-yellow;
+  float: right;
+  &:hover{
+    color: $green;
+  }  
+}
+
+.integrate-message {
+  background: url("noize.png") repeat top left, white;
+  padding: 1em;
+  color: $green;
+}
+

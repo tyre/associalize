@@ -1,11 +1,9 @@
-# require 'spec_helper'
+require 'spec_helper'
 
-# describe DealWorker do
-#   it 'populates the database with deals' do
-#     previous_count = Deal.count
-#     VCR.use_cassette 'deals' do
-#       DealWorker.perform
-#     end
-#     Deal.count.should > (previous_count)
-#   end
-# end
+describe DealWorker, slow: true do
+  it 'populates the database with deals' do
+    expect {
+      DealWorker.perform
+    }.to change { Deal.count }
+  end
+end
