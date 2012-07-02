@@ -1,4 +1,6 @@
+require 'resque/server'
 Associalize::Application.routes.draw do
+  mount Resque::Server, at: '/resque'
   resources :tweets, only: [:index]
   resources :feed_items, only: [:index]
   get "authentications/create"
